@@ -2,9 +2,9 @@
 
 Brandon, Candace, Chase, Coleton, James, Jasmine, Yasmeen
 
--TODO
+## To Do
 
--Recipe list,
-Ingredient and Quantity,
-Expiration Date,
-Rating System/Recommendations/Feedback?
+- Recipe list
+- Ingredients and Quantity
+- Expiration Date
+- Rating System/Recommendations/Feedback?
