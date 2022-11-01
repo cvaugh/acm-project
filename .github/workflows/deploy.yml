@@ -16,4 +16,4 @@ jobs:
         url: 'https://cvaugh.dev/deploy-git.php'
         method: 'POST'
         customHeaders: '{"Content-Type": "application/json"}'
-        data: '{"project": "acm", "action": "deploy", "commit": "${{ github.sha }}"}'
+        data: '{"project": "acm", "action": "deploy", "commit": "${{ github.sha }}", "key": "${{ secrets.DEPLOY_KEY }}"}'
