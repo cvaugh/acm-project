@@ -1,0 +1,236 @@
+/* roboto-regular - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('fonts/roboto-v30-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/roboto-v30-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-500 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('fonts/roboto-v30-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/roboto-v30-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-mono-regular - latin */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('fonts/roboto-mono-v22-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/roboto-mono-v22-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-mono-500 - latin */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('fonts/roboto-mono-v22-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/roboto-mono-v22-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+:root {
+    --color-background: #FEFEFC;
+    --color-background-card: #FFF;
+    --color-foreground: #212121;
+    --color-primary-50: #FFE2D9;
+    --color-primary-100: #EFC1BB;
+    --color-primary-200: #D09D98;
+    --color-primary-300: #B27973;
+    --color-primary-400: #9C5D58;
+    --color-primary-500: #85433F;
+    --color-primary-600: #793A38;
+    --color-primary-700: #682F2E;
+    --color-primary-800: #582327;
+    --color-primary-900: #47161D;
+    --color-secondary-50: #F9F2E0;
+    --color-secondary-100: #F2DFB2;
+    --color-secondary-200: #EACA80;
+    --color-secondary-300: #E3B54B;
+    --color-secondary-400: #E0A61E;
+    --color-secondary-500: #DD9700;
+    --color-secondary-600: #DA8C00;
+    --color-secondary-700: #D57D00;
+    --color-secondary-800: #D06F00;
+    --color-secondary-900: #C85700;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: var(--color-primary-700);
+    color: var(--color-foreground);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14pt;
+    display: flex;
+    flex-flow: column;
+}
+
+header {
+    color: var(--color-background);
+    font-family: 'Roboto Mono', 'Roboto', sans-serif;
+    text-transform: uppercase;
+    display: block;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 56px;
+    padding: 0 1.5rem;
+    z-index: 1;
+}
+
+header .title {
+    color: var(--color-background);
+    font-weight: 500;
+    letter-spacing: 0.25ex;
+}
+
+header .title:hover {
+    color: var(--color-background);
+}
+
+#topbar {
+    background: var(--color-primary-800);
+    display: block;
+    height: 24px;
+    z-index: 0;
+}
+
+nav {
+    padding: 0 1rem;
+    margin-right: -1rem;
+}
+
+nav a {
+    display: table-cell;
+    color: var(--color-primary-50);
+    padding: 0 1rem;
+    vertical-align: center;
+    font-size: 80%;
+    transition: 0.3s;
+    position: relative;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    left: 25%;
+    border-top: none;
+    transition: border 0.1s;
+}
+
+nav:hover a {
+    color: var(--color-primary-300);
+}
+
+nav a:hover {
+    color: var(--color-background);
+}
+
+nav a:hover::before {
+    border-top: 4px solid var(--color-background);
+}
+
+#content-wrapper {
+    z-index: 5;
+    flex: 1 1 auto;
+    display: flex;
+    filter: drop-shadow(0.1rem 0.1rem 0.2rem var(--color-primary-900));
+}
+
+#content {
+    background: var(--color-background);
+    padding: 2rem;
+    clip-path: polygon(0 2rem, 2rem 0, 100% 0%, 100% 100%, 0% 100%, 0% 0%);
+    flex-grow: 1;
+}
+
+a {
+    color: var(--color-secondary-500);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--color-secondary-700);
+}
+
+.cards-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.card {
+    background: var(--color-background-card);
+    padding: 16px;
+    margin: 16px;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    width: 350px;
+    box-sizing: border-box;
+    align-self: flex-start;
+}
+
+.card-media {
+    margin: -16px -16px 16px;
+    border-radius: 5px 5px 0 0;
+    width: 350px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.0125em;
+}
+
+.card-subtitle, .card-text {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.0125em;
+    opacity: 0.6;
+}
+
+.card-text {
+    padding-top: 18px;
+}
+
+.card-actions {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding-top: 16px;
+    margin: -8px;
+}
+
+.card-actions a {
+    border-radius: 5px;
+    padding: 0.5rem;
+    transition: 0.3s;
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.card-actions a:hover {
+    background: var(--color-secondary-50);
+    transition: 0.3s;
+}
