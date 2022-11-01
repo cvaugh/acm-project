@@ -32,7 +32,7 @@ include "config.php";
         </header>
         <div id="content-wrapper">
             <div id="content">
-                <p><code><?php echo CONFIG["db_username"] . "@" . CONFIG["db_host"] ?></code></p>
+                <p><code><?php echo $config["db_username"] . "@" . $config["db_host"] ?></code></p>
             </div>
         </div>
     </body>
