@@ -26,18 +26,37 @@ Brandon, Candace, Chase, Coleton, James, Jasmine, Yasmeen
 
 ### `recipes` table
 
-| Column | Description |
-|--------|-------------|
-| (to do) |  |
+| Column | Type | Extra | Foreign Key |
+|--------|------|-------|-------------|
+| `id` | `INT UNSIGNED` | `NOT NULL`, `AUTO_INCREMENT` |  |
+| (to do) |  |  |  |
+
+Primary key: `id`
 
 ### `ingredients` table
 
-| Column | Description |
-|--------|-------------|
-| (to do) |  |
+| Column | Type | Extra | Foreign Key |
+|--------|------|-------|-------------|
+| `id` | `INT UNSIGNED` | `NOT NULL`, `AUTO_INCREMENT` |  |
+| `name` | `VARCHAR(512)` | `NOT NULL` |  |
+| `vegan` | `BOOL` | `DEFAULT '0'` |  |
+| `gluten` | `BOOL` | `DEFAULT '0'` |  |
+
+Primary key: `id`
+
+## `recipe-ingredients` table
+
+| Column | Type | Extra | Foreign Key |
+|--------|------|-------|-------------|
+| `recipe_id` | `INT UNSIGNED` | `NOT NULL` | `recipes.id` |
+| `ingredient_id` | `INT UNSIGNED` | `NOT NULL` | `ingredients.id` |
+| `optional` | `BOOL` | `DEFAULT '0'` |  |
 
 ### `ratings` table
 
-| Column | Description |
-|--------|-------------|
-| (to do) |  |
+| Column | Type | Extra | Foreign Key |
+|--------|------|-------|-------------|
+| `id` | `INT UNSIGNED` | `NOT NULL`, `AUTO_INCREMENT` |  |
+| (to do) |  |  |  |
+
+Primary key: `id`
