@@ -20,7 +20,7 @@ Brandon, Candace, Chase, Coleton, James, Jasmine, Yasmeen
 - [ ] Rating system
 - [ ] Recommendations/feedback?
 - [ ] Recipe scaling
-- [] User-submitted recipes
+- [ ] User-submitted recipes
 
 ## Database
 
