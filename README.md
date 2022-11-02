@@ -15,6 +15,8 @@ Brandon, Candace, Chase, Coleton, James, Jasmine, Yasmeen
   - Rating
 - [ ] Search
 - [ ] Expiration date?
+- [ ] Categories
+- [ ] Show vegan, gluten-free, etc
 - [ ] Rating system
 - [ ] Recommendations/feedback?
 - [ ] Recipe scaling
