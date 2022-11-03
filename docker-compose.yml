@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  server:
+    container_name: acm_server
+    image: php:8.1-apache
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - "8181:80"
+    volumes:
+      - ./:/var/www/html
+  db:
+    container_name: acm_db
+    image: mysql:latest
+    restart: always
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:rw
+    environment:
+      MYSQL_ROOT_PASSWORD: E68PF6dCwL6sTSwaX30czLxfWXL8PRNO
+      MYSQL_DATABASE: acm_project
+      MYSQL_USER: acm_project
+      MYSQL_PASSWORD: FgPTTxZ2YP0CACK7LSj7IQ0w1kXp3fnI
+    ports:
+      - "9906:3306"
